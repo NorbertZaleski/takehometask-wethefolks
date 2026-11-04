@@ -1,0 +1,84 @@
+:root { 
+  --logo-h: 56px; 
+} 
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  overscroll-behavior: none;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+#stage {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 360px;
+  height: 640px;
+  transform-origin: 0 0;
+  overflow: hidden;
+  background: url(assets/bg.jpg) center / cover no-repeat;
+}
+
+#canvas {
+  position: absolute;
+  bottom: 0;
+  inset: 0;
+  width: 360px;
+  height: 640px;
+}
+
+.screen {
+  position: absolute;
+  inset: 0;
+  display: none;
+  pointer-events: none;
+}
+
+.screen.show {
+  display: block;
+  pointer-events: auto;
+}
+
+#logo-bar {
+  position: absolute; 
+  left: 0; 
+  top: 0;
+  width: 360px; 
+  z-index: 10; 
+  pointer-events: none;
+}
+
+#logo-bar img { 
+  display: block; 
+  width: 100%; 
+  height: auto; 
+}
+
+#start {
+  display: none;
+}
+
+#start.show {
+  display: flex;
+  flex-direction: column;
+}
+
+#headline {
+  width: 360px;
+  z-index: 9;
+  pointer-events: none;
+}
+
+#headline img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
