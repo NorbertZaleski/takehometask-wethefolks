@@ -31,12 +31,11 @@ html, body {
   outline: 1px solid rgba(255, 0, 0, 0.6);
 }
 
-#layer-texture,
-#layer-gameplay {
+#layer-texture {
   position: absolute;
   inset: 0;
-  width: auto;
-  height: 640px;
+  background: url(assets/bg_texture.png) 0 170px / 360px 640px no-repeat;
+  z-index: 1;
   pointer-events: none;
 }
 
@@ -83,9 +82,13 @@ html, body {
 #start.show {
   display: flex;
   flex-direction: column;
+  padding-top: 170px;
 }
 
 #headline {
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 360px;
   height: 170px;
   z-index: 9;
@@ -101,11 +104,14 @@ html, body {
 
 #start-screen {
   position: relative;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  padding-top: 200px;
   flex: 1;
-  background: url(assets/bg_texture.png) left bottom / 360px auto no-repeat;
 }
 
-#start-screen .frame {
+.frame {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -116,6 +122,13 @@ html, body {
 }
 
 .content {
-  position: absolute;
+  position: relative;
   inset: 0;
+}
+
+#gesture {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

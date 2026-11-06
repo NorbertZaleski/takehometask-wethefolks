@@ -5,3 +5,6 @@ GUN RUN AD:
 - image pixel sizes are reduced on load by halve function, I tried using css transform scale, but it doesn't change the layout size
 - I ordered layers using z-index for correct visibility
 - For #headline bg I hardcoded height value (170px), because tut.png's size covers the whole screen and setting bg on it would cover everything
+- Deleted gameplay background from DOM and replaced it with background rendered in script to implement moving/scroll logic
+- Implemented pixel collision of border.png by checking alpha
+- Implemented firstInput so the first input doesn't make the player jump

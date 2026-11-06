@@ -10,7 +10,7 @@ To run a local server you can use:
 
 ## Known issues or shortcuts I took:
 
-- issue with bg_texture visibility on #start-screen: TO FIX
+- issue with bg_texture visibility on #start-screen: fixed by changing placement of left bottom to 0 0
 
 AI Note:
-(a few sentences, in the README is fine): which tools you used, for what, and one example where the output was wrong and you fixed it.
+I used Claude Code to debug visiblity and layout issues as well as to verify math logic in script.js
