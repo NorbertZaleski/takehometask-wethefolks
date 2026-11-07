@@ -11,3 +11,4 @@ GUN RUN AD:
 - Moved all assets under assets/game and assets/music paths to keep the project organised
 - Moved the gsap library file that is needed for animations instead using full node_modules files so the total ad files are smaller 
 - win and fail end screens use the same bubble file so I used one file for both of them for smaller total ad files
+- compressed png files using pngquant and bg.jpg using mozjpeg so the total ad files are smaller
