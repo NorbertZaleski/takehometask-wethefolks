@@ -24,7 +24,7 @@ html, body {
   height: 640px;
   transform-origin: 0 0;
   overflow: hidden;
-  background: url(assets/bg.jpg) center / cover no-repeat;
+  background: url(assets/game/bg.jpg) center / cover no-repeat;
 }
 
 .debug #stage * {
@@ -34,7 +34,7 @@ html, body {
 #layer-texture {
   position: absolute;
   inset: 0;
-  background: url(assets/bg_texture.png) 0 170px / 360px 640px no-repeat;
+  background: url(assets/game/bg_texture.png) 0 170px / 360px 640px no-repeat;
   z-index: 1;
   pointer-events: none;
 }
@@ -93,7 +93,7 @@ html, body {
   height: 170px;
   z-index: 9;
   pointer-events: none;
-  background: url(assets/bg.jpg);
+  background: url(assets/game/bg.jpg);
 }
 
 #headline img {
@@ -131,4 +131,115 @@ html, body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+
+#headline.hide {
+  display: none;
+}
+
+/*fail*/
+#fail { 
+  background: url(assets/game/bg.jpg);
+}
+
+#fail .item { 
+  position: absolute; 
+}
+
+#fail .item:not(.btn) { 
+  pointer-events: none; 
+}
+
+#fail .bubble { 
+  left: 50%; 
+  top: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 1;
+}
+
+#fail .bac { 
+  z-index: 2;
+}
+
+#fail .poo {
+  z-index: 2;
+}
+
+#fail .hl { 
+  z-index: 3;
+}
+
+#fail .cta { 
+  left: 38px;
+  top: 482px;
+  z-index: 4;
+}
+
+#fail .replay { 
+  left: 38px;
+  top: 538px;
+  z-index: 4;
+}
+
+#fail .btn { 
+  background: none; 
+  border: 0; 
+  padding: 0; 
+  line-height: 0; 
+  cursor: pointer; 
+}
+
+/*win*/
+
+#win { 
+  background: url(assets/game/bg.jpg);
+}
+
+#win .confetti {
+  position: absolute;
+  z-index: 3;
+  pointer-events: none;
+}
+
+#win .item { 
+  position: absolute; 
+}
+
+#win .item:not(.btn) { 
+  pointer-events: none; 
+}
+
+#win .poo {
+  z-index: 2;
+}
+
+#win .cta { 
+  left: 30px;
+  bottom: 35px;
+  z-index: 4;
+}
+
+#win .btn { 
+  background: none; 
+  border: 0; 
+  padding: 0; 
+  line-height: 0; 
+  cursor: pointer; 
+}
+
+/*sound*/
+#mute {
+  position: absolute;
+  top: calc(var(--logo-h) + 10px);
+  right: 10px;
+  z-index: 11;
+  width: 32px; 
+  height: 32px;
+  border: 0; 
+  border-radius: 50%;
+  background: rgba(255,255,255,.85);
+  font-size: 12px; 
+  line-height: 1;
+  cursor: pointer;
 }
