@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background: #282828;
+}
+
+img {
+    display: block;
+    max-width: none;
+    -webkit-user-drag: none;
+}
+
+.part {
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    cursor: pointer;
+    display: block;
+    background: #1d3322;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.left {
+    left: 0;
+    width: 320px;
+    height: 975px;
+    --x: 0px;
+}
+
+.top {
+    left: 324px;
+    width: 1032px;
+    height: 250px;
+    --x: 324px;
+}
+
+.right {
+    left: 1360px;
+    width: 320px;
+    height: 975px;
+    --x: 1360px;
+}
+
+/* background */
+.bg {
+    position: absolute;
+    left: calc(-1 * var(--x));
+    top: 0;
+    width: 1680px;
+    height: 975px;
+    transform-origin: 840px 0;
+    will-change: transform;
+}
+
+.bg img {
+    width: 1680px;
+    height: 975px;
+}
+
+.veil {
+    position: absolute;
+    inset: 0;
+    background: #07160c;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* skyscraper layers */
+.layer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 320px;
+    height: 975px;
+    pointer-events: none;
+}
+
+.logo {
+    transform-origin: 160px 125px;
+}
+
+.copy {
+    transform-origin: 160px 800px;
+}
+
+.box {
+    left: 0;
+    top: 744px;
+    width: 320px;
+    height: 170px;
+    background: rgba(15, 108, 161, .88);
+    transform-origin: 160px 85px;
+}
+
+.cta {
+    position: absolute;
+    left: 73.75px;
+    top: 837px;
+    width: 172.5px;
+    height: 46.5px;
+    border-radius: 8px;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.cta img {
+    width: 172.5px;
+    height: 46.5px;
+}
+
+/* top headline */
+.hl {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1032px;
+    height: 250px;
+    pointer-events: none;
+}
+
+.h1 {
+    clip-path: inset(0 0 165px 0);
+}
+
+.h2 {
+    clip-path: inset(85px 0 98px 0);
+}
+
+.h3 {
+    clip-path: inset(152px 0 0 0);
+}
+
+/* initial state GSAP */
+.js .a {
+    opacity: 0;
+}
+
+/* reduced motion final state, no movement */
+@media (prefers-reduced-motion: reduce) {
+    .a {
+        opacity: 1 !important;
+    }
+
+    .veil {
+        display: none;
+    }
+}
+
+/* standalone parts top left right */
+body.solo {
+    background: transparent;
+    overflow: hidden;
+}
+
+.solo .part {
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+.solo .dbg {
+    display: none;
+    position: absolute;
+    z-index: 99;
+    opacity: .5;
+    pointer-events: none;
+    top: -51.3px;
+    width: 1727.2px;
+}
+
+html.dbg .solo .dbg {
+    display: block;
+}

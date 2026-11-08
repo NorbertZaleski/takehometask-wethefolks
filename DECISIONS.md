@@ -12,3 +12,8 @@ GUN RUN AD:
 - Moved the gsap library file that is needed for animations instead using full node_modules files so the total ad files are smaller 
 - win and fail end screens use the same bubble file so I used one file for both of them for smaller total ad files
 - compressed png files using pngquant and bg.jpg using mozjpeg so the total ad files are smaller
+
+FIREPLACE AD:
+
+- I used bg-big.jpg as the single source for all three parts, because the pre-cut bg.jpg files turned out not to match crops of it, so they wouldn't line up. I cut the left, top and right backgrounds from that one image at the exact positions they occupy in the layout, so the moss texture continues across the gaps. Each part loads only its own small crop instead of the full image, which keeps the ad files light. Another reason is that way I only need to use 1 file which overall is lighter than 3 backgrounds.
+- compressed png files using pngquant and bg.jpg using mozjpeg so the total ad files are smaller

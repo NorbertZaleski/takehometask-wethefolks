@@ -16,10 +16,11 @@ To run a local server you can use:
 - add collectible items that give bonus points
 
 ## Known issues or shortcuts I took:
-
+Gut run:
 - issue with bg_texture visibility on #start-screen: fixed by changing placement of left bottom to 0 0
 - issue with firstInput, after playing if player jumped even though it was the first jump of the round - typo in resetGame function: firstInput=false instead of true
 
-AI Note:
+
+## AI Note:
 I used Claude Code to debug visiblity and layout issues as well as to verify math logic in script.js.
 I also used Claude for implementing gsap animations, since I have no previous experience working with that library
